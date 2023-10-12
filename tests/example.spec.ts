@@ -214,9 +214,7 @@ test('Cookies learn more button', async ({loginPage, context}) => {
   const pagePromise = context.waitForEvent('page');
 
   await test.step('Click on learn more button', async ()=> {  
-    // const pagePromise = context.waitForEvent('page');
     await loginPage.cookiesBanner.learnMoreLink.getRawElement().click();
-    // await loginPage.page.waitForURL(`**${privacyAndPolicy.PATH}`)
   });
 
   await test.step("Opened Privacy Policy page", async () => { 
